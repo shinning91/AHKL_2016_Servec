@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="200px"
+        android:id="@+id/people_nameInfo">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/profile_picture"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"
+            android:layout_below="@+id/nameTextView"
+            android:layout_centerHorizontal="true" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80px"
+            >
+            <TextView
+                android:text="Ezekiel Chow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/people_Name"
+                android:layout_marginTop="60px"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:textColor="#ffffff"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/savecontact_btn"
+                android:text="Save Contact"
+                android:onClick="save_contact"
+                android:layout_below="@id/people_Name"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:background="#0e0e0e"
+        android:layout_below="@id/people_nameInfo"
+        android:id="@+id/people_line1"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/people_line1"
+        android:orientation="vertical"
+        android:layout_marginTop="20px"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/people_title_service">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Services:"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Computer Repairs, Reformat OS and selling second hand compuer parts."
+            android:textColor="#ffffff"
+            android:textSize="14dp"/>
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:background="#0e0e0e"
+        android:layout_below="@id/people_title_service"
+        android:id="@+id/people_line2"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:layout_marginBottom="15dp"
+        android:layout_below="@+id/people_line2"
+        android:layout_alignParentStart="true"
+        android:id="@+id/people_aboutme">
+
+        <TextView
+            android:text="About Me"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/aboutMeTitle"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="Has 10 years of experience in reparing computers. Cheap, fast and superb services."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/aboutMeTextView"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:layout_alignEnd="@+id/nameTextView" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:background="#0e0e0e"
+        android:layout_below="@id/people_aboutme"
+        android:id="@+id/people_line3"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20px"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:layout_marginBottom="15dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/people_line3"
+        android:id="@+id/people_contactdetails">
+        <TextView
+            android:text="Contact Details: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/people_contactText"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:textStyle="bold"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Phone Number: "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/people_phoneNumText"
+                android:textColor="#ffffff"
+                android:layout_marginTop="40px"
+                android:textSize="14dp" />
+            <TextView
+                android:text="012345678"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/people_phoneNum"
+                android:textColor="#ffffff"
+                android:textSize="14dp"
+                android:layout_marginTop="40px"
+                android:layout_toRightOf="@id/people_phoneNumText"/>
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:height="40dp"
+                android:width="40dp"
+                android:layout_marginLeft="20px"
+                android:src="@drawable/whatsappicon"
+                android:id="@+id/whatsapp_btn"
+                android:onClick="whatsappUser"
+                android:layout_toRightOf="@id/people_phoneNum"/>
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:height="40dp"
+                android:width="40dp"
+                android:src="@drawable/phonelogo"
+                android:id="@+id/call_btn"
+                android:onClick="callUser"
+                android:layout_toRightOf="@id/whatsapp_btn"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px">
+            <TextView
+                android:text="Email: "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/people_EmailText"
+                android:textColor="#ffffff"
+                android:layout_marginTop="40px"
+                android:textSize="14dp" />
+            <TextView
+                android:text="someone@example.com"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/people_Email"
+                android:textColor="#ffffff"
+                android:textSize="14dp"
+                android:layout_marginTop="40px"
+                android:layout_toRightOf="@id/people_EmailText"/>
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:height="40dp"
+                android:width="40dp"
+                android:layout_marginLeft="20px"
+                android:id="@+id/email_btn"
+                android:onClick="whatsappUser"
+                android:src="@drawable/emaillogo"
+                android:layout_toRightOf="@id/people_Email"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:background="#0e0e0e"
+        android:layout_below="@id/people_contactdetails"
+        android:id="@+id/people_line4"/>
+    <LinearLayout
+        android:id="@+id/people_promotion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/people_line4"
+        android:orientation="vertical"
+        android:layout_marginTop="15px"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:layout_marginBottom="15dp">
+        <TextView
+            android:text="Promotions: "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/promotionText"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:text="20% discount for reparing two computers!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/promotion"
+            android:textColor="#ffffff"
+            android:textSize="14dp" />
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:background="#0e0e0e"
+        android:layout_below="@id/people_promotion"
+        android:id="@+id/people_line5"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/people_line5"
+        android:orientation="vertical"
+        android:id="@+id/people_rating"
+        android:layout_marginTop="20px"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:layout_marginBottom="20dp">
+        <TextView
+            android:text="Rating: "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingText"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:text="4.5 / 5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rating"
+            android:textColor="#ffffff"
+            android:textSize="14dp" />
+    </LinearLayout>
+</RelativeLayout>
+
